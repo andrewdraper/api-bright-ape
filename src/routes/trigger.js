@@ -7,8 +7,8 @@ const triggerModel = new TriggerModel();
 
 // POST /behavior
 router.post("/", express.urlencoded({ extended: true }), async (req, res) => {
+  console.log('Trigger endpoint accessed.')
   res.status(200).send('Webhook received');
-
   // Process the webhook asynchronously
   triggerModel.processWebhook(req.body);
 });

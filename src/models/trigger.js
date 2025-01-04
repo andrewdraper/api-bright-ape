@@ -8,7 +8,9 @@ class TriggerModel {
   // }
 
   async processWebhook(data) {
+    console.log('Trigger endpoint accessed.')
     console.log(data)
+    return { status: 200 }
   }
 }
 
