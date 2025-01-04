@@ -4,6 +4,7 @@ const triggerRouter = require('./trigger');
 
 // Root route
 router.get('/', (req, res) => {
+  console.log('Root endpoint accessed.')
   res.json({ status: 200, message: "Welcome to the Bright Ape API" });
 });
 
